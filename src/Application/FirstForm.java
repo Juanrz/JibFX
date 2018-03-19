@@ -13,25 +13,22 @@ public class FirstForm extends Application {
 		launch(args);
 	}
 	@Override
-	public void start(Stage primaryStage) {
-		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(FirstForm.class.getResource("View/FirstForm_View.fxml"));	
-        Parent fxmlRoot;
-		try {
-			fxmlRoot = loader.load();
-			Scene scene = new Scene(fxmlRoot);
+	public void start(Stage primaryStage) throws IOException {
+		//FXMLLoader loader = new FXMLLoader();
+        //loader.setLocation(FirstForm.class.getResource("View/FirstForm_View.fxml"));	
+       // Parent fxmlRoot;
+		Parent fxmlRoot = FXMLLoader.load(getClass().getResource("View/FirstForm_View.fxml")); 	 
+			//fxmlRoot = loader.load();
+		Scene scene = new Scene(fxmlRoot);
        	 
-      	    primaryStage.setTitle("JavaFX Hello World");
+		primaryStage.setTitle("JavaFX Hello World");
       	 
-      	    primaryStage.setScene(scene);
+		primaryStage.setScene(scene);
       	 
-      	    // Show Stage
-      	    primaryStage.show();
-		} catch (IOException e) {
-			// TODO 自動產生的 catch 區塊
-			e.printStackTrace();
-		}        	    
-        	 
+		// Show Stage
+		primaryStage.show();
+		       	    
+		
         	  
 	}	
 }
