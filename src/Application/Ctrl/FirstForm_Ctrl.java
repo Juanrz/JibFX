@@ -6,8 +6,11 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
+
+import com.jfoenix.controls.JFXButton;
 
 import Class.Test.Utils;
 import javafx.event.ActionEvent;
@@ -23,6 +26,8 @@ public class FirstForm_Ctrl {
 		@FXML
 		private Button button;
 		// the FXML image view
+		@FXML
+		private JFXButton btn1;
 		@FXML
 		private ImageView currentFrame;
 		
@@ -41,6 +46,13 @@ public class FirstForm_Ctrl {
 		 * @param event
 		 *            the push button event
 		 */
+		@FXML
+		protected void btn1(ActionEvent event)
+		{
+			Mat image=Imgcodecs.imread("C://lena.jpg");
+			Image imageToShow = Utils.mat2Image(image);
+			updateImageView(currentFrame, imageToShow);
+		}
 		@FXML
 		protected void startCamera(ActionEvent event)
 		{

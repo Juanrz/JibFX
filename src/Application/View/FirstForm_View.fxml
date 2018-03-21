@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="745.0" prefWidth="1254.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Application.Ctrl.FirstForm_Ctrl">
+<AnchorPane prefHeight="745.0" prefWidth="1254.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Ctrl.FirstForm_Ctrl">
    <children>
       <Button fx:id="button" layoutX="963.0" layoutY="429.0" mnemonicParsing="false" prefHeight="303.0" prefWidth="263.0" text="startCam" />
-      <ImageView fx:id="currentFrame" fitHeight="720.0" fitWidth="838.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="currentFrame" fitHeight="720.0" fitWidth="838.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Users/user/Desktop/樣品圖片/3-2.jpg" />
+         </image></ImageView>
+      <JFXButton fx:id="btn1" layoutX="1025.0" layoutY="106.0" prefHeight="174.0" prefWidth="182.0" ripplerFill="#3e694a" text="First" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="28.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
