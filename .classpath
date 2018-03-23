@@ -8,5 +8,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JFoenix"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Opencv3"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Otherelse"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaCV1.4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

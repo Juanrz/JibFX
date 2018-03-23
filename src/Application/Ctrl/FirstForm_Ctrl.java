@@ -13,6 +13,7 @@ import org.opencv.videoio.VideoCapture;
 import com.jfoenix.controls.JFXButton;
 
 import Class.Test.Utils;
+import exercise1.ImageGui;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -47,15 +48,18 @@ public class FirstForm_Ctrl {
 		 *            the push button event
 		 */
 		@FXML
-		protected void btn1(ActionEvent event)
-		{
-			Mat image=Imgcodecs.imread("C://lena.jpg");
-			Image imageToShow = Utils.mat2Image(image);
+		protected void btn11(ActionEvent event)
+		{   
+			Mat image=Imgcodecs.imread("C://321.bmp");
+			//ImageGui a=new ImageGui(image,"YO");
+			//a.showImg();
+			Image imageToShow = Utils.mat2Image(image);			 
 			updateImageView(currentFrame, imageToShow);
+			
 		}
 		@FXML
 		protected void startCamera(ActionEvent event)
-		{
+		{							
 			if (!this.cameraActive)
 			{
 				// start the video capture
@@ -182,7 +186,7 @@ public class FirstForm_Ctrl {
 		/**
 		 * On application close, stop the acquisition from the camera
 		 */
-		protected void setClosed()
+		public void setClosed()
 		{
 			this.stopAcquisition();
 		}	 

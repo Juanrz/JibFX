@@ -3,17 +3,22 @@ package Application;
 import java.io.IOException;
 
 import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
 
 import Application.Ctrl.FirstForm_Ctrl;
+import exercise1.ImageGui;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class FirstForm extends Application {
 	public static void main(String[] args) {
-		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);			
 		launch(args);
 	}
 	@Override
@@ -33,7 +38,12 @@ public class FirstForm extends Application {
 		// Show Stage
 		primaryStage.show();
 		FirstForm_Ctrl controller = loader.getController(); 
-	
+		primaryStage.setOnCloseRequest((new EventHandler<WindowEvent>() {
+			public void handle(WindowEvent we)
+			{
+				controller.setClosed();
+			}
+		}));
 		       	    
 		
         	  
